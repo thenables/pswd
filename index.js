@@ -38,7 +38,7 @@ Password.prototype.compare = function* (password, hash) {
     password,
     frags[0],
     parseInt(frags[1], 10),
-    parseInt(frags[2])
+    parseInt(frags[2], 10)
   )
   return hash === res
 }
