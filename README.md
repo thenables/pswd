@@ -9,7 +9,7 @@ Similar to [pwd](https://github.com/visionmedia/node-pwd). Designed with generat
 
 ### var pswd = require('pswd')([options])
 
-These options can also be set and changed by doing `pswd[options] = Integer`.
+These options can also be set and changed by doing `pswd[option] = Integer`.
 
 - `length` <128> - salt and `pbkdf2` byte length
 - `iterations` <12000> - `pbkdf2` iteration count
