@@ -16,17 +16,29 @@ function Password(options) {
   }
 }
 
-Password.prototype.hash = function* (password, salt) {
+Password.prototype.hash = function* (password, salt, iterations, length) {
   salt = salt || (yield this.salt).toString('base64')
-  var iterations = this.iterations
-  var length = this.length
+  iterations = iterations || this.iterations
+  length = length || this.length
   var hash = yield function (done) {
     crypto.pbkdf2(password, salt, iterations, length, done)
   }
 
-  return salt + ';' + hash.toString('base64')
+  return [
+    salt,
+    iterations,
+    length,
+    hash.toString('base64')
+  ].join(';')
 }
 
 Password.prototype.compare = function* (password, hash) {
-  return hash === (yield* this.hash(password, hash.split(';')[0]))
+  var frags = hash.split(';')
+  var res = yield* this.hash(
+    password,
+    frags[0],
+    parseInt(frags[1], 10),
+    parseInt(frags[2])
+  )
+  return hash === res
 }
