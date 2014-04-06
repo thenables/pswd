@@ -1,4 +1,5 @@
 var crypto = require('crypto')
+var scmp = require('scmp')
 
 module.exports = Password
 
@@ -40,5 +41,5 @@ Password.prototype.compare = function* (password, hash) {
     parseInt(frags[1], 10),
     parseInt(frags[2], 10)
   )
-  return hash === res
+  return scmp(hash, res)
 }

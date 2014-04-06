@@ -1,7 +1,7 @@
 {
   "name": "pswd",
   "description": "Hash and compare passwords with pbkdf2",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": {
     "name": "Jonathan Ong",
     "email": "me@jongleberry.com",
@@ -9,16 +9,12 @@
     "twitter": "https://twitter.com/jongleberry"
   },
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cojs/pswd.git"
-  },
-  "bugs": {
-    "mail": "me@jongleberry.com",
-    "url": "https://github.com/cojs/pswd/issues"
+  "repository": "cojs/pswd",
+  "dependencies": {
+    "scmp": "0"
   },
   "devDependencies": {
-    "co": ">= 3",
+    "co": "3",
     "mocha": "*",
     "should": "*"
   },
