@@ -1,4 +1,5 @@
-var crypto = require('crypto')
+
+var crypto = require('mz/crypto')
 var scmp = require('scmp')
 
 module.exports = Password
@@ -10,20 +11,17 @@ function Password(options) {
   options = options || {}
   this.length = options.length || 128
   this.iterations = options.iterations || 12000
+}
 
-  var self = this
-  this.salt = function (done) {
-    crypto.randomBytes(self.length, done)
-  }
+Password.prototype.salt = function (length) {
+  return crypto.randomBytes(length || this.length)
 }
 
 Password.prototype.hash = function* (password, salt, iterations, length) {
-  salt = salt || (yield this.salt).toString('base64')
+  salt = salt || (yield this.salt()).toString('base64')
   iterations = iterations || this.iterations
   length = length || this.length
-  var hash = yield function (done) {
-    crypto.pbkdf2(password, salt, iterations, length, done)
-  }
+  var hash = yield crypto.pbkdf2(password, salt, iterations, length)
 
   return [
     salt,

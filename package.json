@@ -11,6 +11,7 @@
   "license": "MIT",
   "repository": "cojs/pswd",
   "dependencies": {
+    "mz": "0",
     "scmp": "0"
   },
   "devDependencies": {
@@ -19,9 +20,6 @@
     "should": "*"
   },
   "scripts": {
-    "test": "make test"
-  },
-  "engines": {
-    "node": ">= 0.11.9"
+    "test": "mocha --harmony-generators --require should --reporter spec --bail"
   }
 }
