@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": "cojs/pswd",
   "dependencies": {
-    "mz": "0",
+    "mz": "1",
     "scmp": "0"
   },
   "devDependencies": {
