@@ -1,7 +1,7 @@
 {
   "name": "pswd",
   "description": "Hash and compare passwords with pbkdf2",
-  "version": "2.1.2",
+  "version": "3.0.0",
   "author": {
     "name": "Jonathan Ong",
     "email": "me@jongleberry.com",
