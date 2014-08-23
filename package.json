@@ -17,7 +17,6 @@
   },
   "devDependencies": {
     "bluebird": "2",
-    "co": "3",
     "mocha": "*",
     "should": "*"
   },
