@@ -1,7 +1,7 @@
 
 var assert = require('assert')
 
-var pswd = require('./')()
+var pswd = require('..')()
 
 describe('pswd', function () {
   it('should hash a password', function () {

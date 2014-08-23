@@ -6,8 +6,7 @@ var scmp = require('scmp')
 module.exports = Password
 
 function Password(options) {
-  if (!(this instanceof Password))
-    return new Password(options)
+  if (!(this instanceof Password)) return new Password(options)
 
   options = options || {}
   this.length = options.length || 128
