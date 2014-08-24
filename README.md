@@ -30,7 +30,7 @@ These options can also be set and changed by doing `pswd[option] = Integer`.
 
 Creates a hash from the password with optional `salt`, `iterations`, and `length` arguments (used for comparision).
 
-### pswd.compare(password, hash).then( hash => )
+### pswd.compare(password, hash).then( okay => )
 
 Compare a password with a hash. `okay` is a `Boolean`.
 
