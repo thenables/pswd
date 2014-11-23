@@ -12,13 +12,13 @@
   "repository": "thenables/pswd",
   "dependencies": {
     "mz": "1",
-    "scmp": "0",
+    "scmp": "1",
     "native-or-bluebird": "1"
   },
   "devDependencies": {
     "istanbul": "0",
     "bluebird": "2",
-    "mocha": "1"
+    "mocha": "2"
   },
   "scripts": {
     "test": "mocha --reporter spec",
