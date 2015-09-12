@@ -11,9 +11,9 @@
   "license": "MIT",
   "repository": "thenables/pswd",
   "dependencies": {
-    "mz": "1",
-    "scmp": "1",
-    "native-or-bluebird": "1"
+    "mz": "^2.0.0",
+    "native-or-bluebird": "1",
+    "scmp": "1"
   },
   "devDependencies": {
     "istanbul": "0",
