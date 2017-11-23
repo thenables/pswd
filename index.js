@@ -22,7 +22,7 @@ Password.prototype.hash = function (password, salt, iterations, length) {
   length = length || this.length
   return (salt ? Promise.resolve(salt) : this.salt().then(toBase64))
     .then(function (_salt) {
-      return crypto.pbkdf2(password, salt = _salt, iterations, length)
+      return crypto.pbkdf2(password, salt = _salt, iterations, length, 'sha1')
     })
     .then(function (hash) {
       return [
