@@ -11,13 +11,13 @@
   "license": "MIT",
   "repository": "thenables/pswd",
   "dependencies": {
-    "mz": "^2.0.0",
-    "scmp": "1"
     "any-promise": "^1.3.0",
+    "mz": "^2.7.0",
+    "scmp": "^1.0.2"
   },
   "devDependencies": {
-    "istanbul": "0",
-    "mocha": "2"
+    "istanbul": "^0.4.5",
+    "mocha": "^3.5.3"
   },
   "scripts": {
     "test": "mocha --reporter spec",

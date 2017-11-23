@@ -3,6 +3,7 @@
 *.log
 *.gz
 
+package-lock.json
 node_modules
 coverage
 cache
