@@ -1,5 +1,5 @@
 
-var Promise = require('native-or-bluebird')
+var Promise = require('any-promise')
 var crypto = require('mz/crypto')
 var scmp = require('scmp')
 
